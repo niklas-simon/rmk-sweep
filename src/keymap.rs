@@ -192,9 +192,9 @@ pub const fn get_default_keymap() -> [[[KeyAction; COL]; ROW]; NUM_LAYER] {
         ]),
         // 16: Gaming
         layer!([
-            [k!(Tab), k!(Q), k!(E), k!(R), k!(T), df!(16), T, T, k!(AudioVolDown), k!(AudioVolUp)],
+            [k!(Tab), k!(Q), k!(E), k!(R), k!(T), df!(16), T, k!(I), k!(AudioVolDown), k!(AudioVolUp)],
             [k!(LShift), k!(A), k!(W), k!(D), k!(F), df!(0), k!(Left), k!(Up), k!(Right), T],
-            [k!(LCtrl), k!(Z), k!(X), k!(S), k!(V), df!(8), T, k!(Down), T, T],
+            [k!(LCtrl), k!(Z), k!(S), k!(X), k!(V), df!(8), k!(M), k!(Down), T, k!(Escape)],
             [a!(No), a!(No), a!(No), k!(LAlt), k!(Space), a!(No), a!(No), a!(No), a!(No), a!(No)]
         ]),
     ]
