@@ -79,9 +79,9 @@ async fn main(_spawner: Spawner) {
     let mut behavior_config = BehaviorConfig::default();
 
     behavior_config.morse.enable_flow_tap = true;
-    behavior_config.morse.prior_idle_time = Duration::from_millis(200);
+    behavior_config.morse.prior_idle_time = Duration::from_millis(100);
     behavior_config.morse.default_profile = MorseProfile::const_default().
-        with_mode(Some(MorseMode::HoldOnOtherPress))
+        with_mode(Some(MorseMode::PermissiveHold))
         .with_hold_timeout_ms(Some(200));
 
     behavior_config.fork = ForksConfig {
@@ -89,7 +89,7 @@ async fn main(_spawner: Spawner) {
     };
     behavior_config.combo = CombosConfig {
         combos: get_combos(),
-        timeout: Duration::from_millis(200)
+        timeout: Duration::from_millis(100)
     };
 
     let mut per_key_config = PositionalConfig::default();
